@@ -1,0 +1,2 @@
+Boka tid hos tandläkare||False
+Posta brev||False
