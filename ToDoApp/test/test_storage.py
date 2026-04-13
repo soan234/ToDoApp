@@ -5,6 +5,7 @@ from task_storage import FileStorage
 
 class TestFileStorage(unittest.TestCase):
     def test_save(self):
+        #testar att spara en lista av tasks till fil med mockad open()
         storage = FileStorage('todotasks.txt')
         tasks = [Task("Hänga tvätt", False)]
 
@@ -17,6 +18,7 @@ class TestFileStorage(unittest.TestCase):
         handle.write.assert_called_once_with("Hänga tvätt||False\n")
 
     def test_load(self):
+        #testar att läsa tasks från fil med mockad open()
         fake_file = "Hänga tvätt||False\n"
         storage = FileStorage('todotasks.txt')
 
