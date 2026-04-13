@@ -6,15 +6,14 @@ def main():
     storage = FileStorage()
     repo = TaskRepo()
     app = ToDoApp(repo, storage)
-
+    
+    print("1. Visa uppgifter")
+    print("2. Lägg till uppgift")
+    print("3. Färdigmarkera uppgift")
+    print("4. Ta bort uppgift")
+    print("5. Avsluta.")
 
     while True:
-        print("1. Visa uppgifter")
-        print("2. Lägg till uppgift")
-        print("3. Färdigmarkera uppgift")
-        print("4. Ta bort uppgift")
-        print("5. Avsluta.")
-
         val = input("Välj i menyn: ")
 
         if val =="1":
@@ -45,3 +44,6 @@ def main():
 
         else:
             print("Fel val")
+
+if __name__ == "__main__":
+    main()
