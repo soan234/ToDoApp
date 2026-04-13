@@ -21,6 +21,7 @@ def main():
             for i, task in enumerate(app.get_tasks()):
                 status = "KLAR" if task.done else "EJ KLAR"
                 print(i + 1, task.title, status)
+                
         elif val == "2":
             text = input("Vilken uppgift vill du lägga till: ")
             app.add_task(text)
