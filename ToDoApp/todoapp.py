@@ -7,6 +7,9 @@ class ToDoApp:
         self.repo.tasks = self.storage.load()
 
     def add_task(self, title):
+        if not title.strip():
+            print("OBS, uppgiften måste ha en titel")
+            return
         self.repo.add_task(Task(title))
         self.storage.save(self.repo.get_all())
 
