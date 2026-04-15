@@ -9,7 +9,6 @@ class ToDoApp:
     def add_task(self, title):
         if not title.strip():
             print("OBS, uppgiften måste ha en titel")
-            return
         self.repo.add_task(Task(title))
         self.storage.save(self.repo.get_all())
 
@@ -22,4 +21,4 @@ class ToDoApp:
         self.storage.save(self.repo.get_all())
 
     def get_tasks(self):
-        return self.repo.get_all()
+        return list(self.repo.get_all())
