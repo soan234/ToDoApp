@@ -19,4 +19,4 @@ class ToDoApp:
         self.storage.save(self.repo.get_all())
 
     def get_tasks(self):
-        return self.rep.get_all()
+        return self.repo.get_all()
